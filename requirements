@@ -1,0 +1,58 @@
+
+
+First generation - web application
+==================================
+
+Goals:
+
+ - Double-blind image comparison testing system.
+ - Hot-or-not style user interface that allows wetware to view two
+   images, perform the specified comparison, and provide feedback.
+ - Entire process is server-side controlled, including image selection,
+   variable selection, and image creation.
+ - Back end is easy to install with Apache, open source
+ - Pre-generated stimuli
+ - Target wetware is known and separately interviewed by researcher.
+
+Requirements:
+
+ - Test modes: Time-ordered ABX, side-by-side ABX
+ - Fixed-size images: 600x600 for time-ordered, 300x300 for side-by-side
+ - Images in PNG format
+ - Front-end should preload images, then fade into picture from black,
+   fade out to black, etc. on a timer.  The idea is that the wetware
+   will get a fixed amount of time to view images, but a longer amount
+   of time to select A/B/unknown.
+ - Backend should allow session generation (without authentication) to
+   keep track of multiple users simultaneously.
+
+
+Second generation - public web application
+==========================================
+
+Goals:
+
+ - Stability, security, scalability.
+ - Target wetware is unknown to researcher.
+ - Simple interview capability.
+
+Requirements:
+
+ - Session generation with OpenID authentication.  Session expiration.
+   Limit maximum number of concurrent sessions.
+ - Interview system before stimuli presentation.  This should allow the
+   researcher to provide a list of questions and possible answers in a
+   single language.
+
+
+Third generation - standalone Linux app
+=======================================
+
+Goals:
+
+ - Allow more precise control of environment, such as making sure
+   scaling is 1:1, display is working correctly, etc.
+ - Allow automatic collection of more data, such as display information.
+
+
+
