@@ -5,4 +5,9 @@ body {
   background-color: #111;
 
   font-family: Gentium, Serif;
+  text-align: center;
+}
+
+.image {
+  align: center;
 }
