@@ -3,12 +3,33 @@
 <head>
 <title>Image ABX</title>
 <link rel=stylesheet href=comp.css>
+<script>
+  function highlight(event) {
+    event.target.style.border = '5px solid';
+    setTimeout(next_image, 700);
+  }
+  function reset(target) {
+    target.style.border = 'none';
+  }
+  function next_image() {
+    var a = document.getElementById('A');
+    reset(a);
+    a.src = 'A.png';
+    var b = document.getElementById('B');
+    reset(b);
+    b.src = 'B.png';
+  }
+</script>
 </head>
 <body>
 <h1>Image Compare</h1>
 <div class=image>
-<img src=A.png width=640 height=360>
-<img src=B.png width=640 height=360>
+  <img id=A src=A.png width=640 height=360 onclick='highlight()'>
+  <img id=B src=B.png width=640 height=360 onclick='highlight()'>
+<script>
+  document.getElementById('A').addEventListener('click', highlight);
+  document.getElementById('B').addEventListener('click', highlight);
+</script>
 </div>
 <p>Which looks better?</p>
 </body>
